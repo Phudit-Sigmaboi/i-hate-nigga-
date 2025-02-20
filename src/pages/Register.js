@@ -8,7 +8,7 @@ function Register() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [backgroundImageUrl, setBackgroundImageUrl] = useState("https://example.com/your-image.jpg"); // URL พื้นหลังที่สามารถเปลี่ยนได้
+  const [backgroundImageUrl, setBackgroundImageUrl] = useState("https://pbs.twimg.com/media/Gcb8mcnWYAAMQ43.jpg"); // URL พื้นหลังที่สามารถเปลี่ยนได้
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {

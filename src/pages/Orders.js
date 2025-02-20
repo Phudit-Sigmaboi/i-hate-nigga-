@@ -4,13 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-
 const OrdersAndPayment = () => {
     const [orders, setOrders] = useState([]);
     const [selectedOrderID, setSelectedOrderID] = useState("");
     const [orderDetails, setOrderDetails] = useState(null);
     const [paymentMethod, setPaymentMethod] = useState("");
     const [error, setError] = useState("");
+    const [backgroundImageUrl, setBackgroundImageUrl] = useState("https://tr.rbxcdn.com/180DAY-fc9a2d58fa46ee0573fe0933d7a2c9c2/420/420/Image/Png/noFilter"); // URL พื้นหลังที่สามารถเปลี่ยนได้
     const token = localStorage.getItem("token");
     const navigate = useNavigate();
 
@@ -111,7 +111,12 @@ const OrdersAndPayment = () => {
             initial={{ opacity: 0, y: -20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.5 }}
-            style={styles.card}
+            style={{ 
+                ...styles.card, 
+                backgroundImage: `url(${backgroundImageUrl})`,  // ใช้ URL สำหรับพื้นหลัง
+                backgroundSize: "cover",  // ขยายภาพพื้นหลังให้เต็ม
+                backgroundPosition: "center" // จัดให้ภาพอยู่ตรงกลาง
+            }}
         >
             <h2 className="text-center text-primary fw-bold mb-4">
                 📦 <span style={{ color: "#1d3557" }}>Order & Payment</span>

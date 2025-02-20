@@ -10,6 +10,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [backgroundImageUrl, setBackgroundImageUrl] = useState("https://i.pinimg.com/736x/7e/c0/ce/7ec0ce0c889800a9298367fe942471c9.jpg"); // URL พื้นหลังที่สามารถเปลี่ยนได้
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -33,7 +34,7 @@ const Login = () => {
     };
 
     return (
-        <div style={styles.container}>
+        <div style={{ ...styles.container, backgroundImage: `url(${backgroundImageUrl})` }}>
             {/* ✅ CSS Animation */}
             <style>
                 {`
@@ -120,9 +121,8 @@ const styles = {
         position: "relative",
         width: "100%",
         height: "100vh",
-        background: "linear-gradient(-45deg,rgb(0, 0, 0),rgb(27, 16, 70),rgb(72, 46, 125),rgb(34, 23, 49),rgb(37, 17, 78))",
-        backgroundSize: "400% 400%",
-        animation: "gradientAnimation 10s ease infinite",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
