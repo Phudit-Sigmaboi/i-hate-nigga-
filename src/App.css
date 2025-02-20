@@ -1,0 +1,52 @@
+/* Navbar */
+.custom-navbar {
+  display: flex;
+  justify-content: space-between; /* จัดตำแหน่งโลโก้ซ้ายและปุ่ม logout ขวา */
+  align-items: center; /* จัดให้ทุกอย่างอยู่ในแนวนอน */
+  background-color: #1D3557; /* สีน้ำเงินเข้ม */
+  padding: 10px 20px;
+}
+
+/* โลโก้ */
+.navbar-brand {
+  color: #F1FAEE; /* สีขาวสำหรับโลโก้ */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ปุ่ม logout */
+.navbar-nav .nav-item .btn {
+  color: #fff;
+  background-color: #e74c3c; /* สีแดงสำหรับปุ่ม logout */
+  border: none;
+  padding: 5px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-item .btn:hover {
+  background-color: #c0392b; /* เมื่อ hover เปลี่ยนสีเป็นสีเข้ม */
+}
+
+/* เมนู */
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* จัดตำแหน่งเมนูให้อยู่ตรงกลาง */
+  flex-grow: 1; /* ให้เมนูขยายเต็มพื้นที่ */
+}
+
+.nav-link {
+  color: #F1FAEE; /* สีขาวสำหรับเมนู */
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #FFC107; /* เปลี่ยนสีเมื่อ hover เป็นสีเหลือง */
+}
+
+/* สไตล์เพิ่มเติม */
+body {
+  background-color: #ECF0F1; /* พื้นหลังสีเทาอ่อน */
+  font-family: 'Arial', sans-serif;
+}
